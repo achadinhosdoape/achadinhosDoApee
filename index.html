@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achadinhos do Apê</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo-link" href="#inicio"><img src="assets/logo-achadinhos.png" alt="Achadinhos do Apê"></a>
+  <nav class="desktop-nav">
+    <a class="active" href="#inicio"><span>⌂</span>Início</a>
+    
+  </nav>
+  <div class="nav-slogan">Os melhores<br>achadinhos para<br><strong>o seu apê!</strong></div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="hero-image"></div>
+  </section>
+
+  <section class="content-shell">
+    <section class="search-panel">
+      <div class="search-box">
+        <span class="search-icon">⌕</span>
+        <input id="search" placeholder="Digite o nome ou ID do produto..." autocomplete="off">
+        <button id="clearSearch" aria-label="Limpar pesquisa">×</button>
+        <span class="search-yellow">⌕</span>
+      </div>
+    </section>
+
+    <section class="categories-section" id="categorias">
+      <div class="categories">
+        <button class="category active" data-category="Todos"><b>▦</b> Todos</button>
+        <button class="category" data-category="Casa"><b>⌂</b> Casa</button>
+        <button class="category" data-category="Cozinha"><b>♨</b> Cozinha</button>
+        <button class="category" data-category="Organização"><b>▣</b> Organização</button>
+        <button class="category" data-category="Eletrônicos"><b>▤</b> Eletrônicos</button>
+        <button class="category" data-category="Beleza"><b>✦</b> Beleza</button>
+        <button class="category" data-category="Utilidades"><b>⚒</b> Utilidades</button>
+        <button class="category" data-category="Ofertas"><b>🏷</b> Ofertas</button>
+      </div>
+    </section>
+
+    <section id="produtos" class="products-section">
+      <div class="title-row">
+        <div>
+          <h1><span>🔥</span> Achadinhos <strong>em destaque</strong></h1>
+        </div>
+        <span id="resultCount">Carregando...</span>
+      </div>
+
+      <div id="productGrid" class="product-grid"></div>
+
+      <div id="emptyState" class="empty hidden">
+        <div>🔎</div><h2>Nenhum produto encontrado</h2><p>Tente pesquisar por outro nome, ID ou categoria.</p>
+      </div>
+    </section>
+
+ <section class="explore-section" id="sobre">
+    <div class="explore-content">
+        <span class="explore-label">✨ ACHADINHOS DO APÊ</span>
+
+        <h2>
+            Seu próximo achadinho
+            <strong>pode estar aqui.</strong>
+        </h2>
+
+        <p>
+            Encontre produtos que deixam seu apê mais bonito,
+            organizado e prático.
+        </p>
+
+        <a href="#inicio" class="explore-button">
+            Explorar achadinhos →
+        </a>
+    </div>
+
+    <div class="explore-decoration">
+        <span>🪴</span>
+        <span>🏠</span>
+        <span>✨</span>
+    </div>
+</section>
+  </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-main">
+
+        <div class="footer-brand">
+            <img src="assets/logo-achadinhos.png" alt="Achadinhos do Apê">
+
+            <p>
+                Achadinhos que deixam<br>
+                o seu apê ainda melhor. ✨
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explorar</h3>
+
+            <a href="#inicio">Início</a>
+        </div>
+
+        <div class="footer-about">
+            <h3>Sobre o Achadinhos</h3>
+
+            <p>
+                Uma seleção de produtos para deixar
+                sua casa mais bonita, prática e organizada.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            © Achadinhos do Apê 2026
+        </span>
+        <span>
+            Feito para quem ama o próprio apê 🏠
+        </span>
+
+    </div>
+</footer>
+
+<div id="modal" class="modal hidden">
+  <div class="backdrop" data-close></div>
+  <article class="modal-card">
+    <button class="modal-close" data-close>×</button>
+    <div class="modal-photo"><img id="modalImage" src="" alt=""></div>
+    <div class="modal-content">
+      <span id="modalCategory" class="modal-tag"></span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalId"></p>
+      <p>Achou a sua cara? 🛍️ <br>Clique abaixo e confira esse achadinho na Shopee!</p>
+      <a id="modalLink" class="modal-button" target="_blank" rel="noopener">Ver produto na Shopee →</a>
+    </div>
+  </article>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
